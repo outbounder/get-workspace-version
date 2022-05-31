@@ -1,0 +1,28 @@
+{
+  "name": "get-workspace-version",
+  "version": "0.0.0",
+  "description": "Prints the version of a workspace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release-major": "npm version major && npm publish",
+    "release-patch": "npm version patch && npm publish",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/outbounder/get-workspace-version.git"
+  },
+  "bin": {
+    "get-workspace-version": "./index.js"
+  },
+  "author": "Boris Filipov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/outbounder/get-workspace-version/issues"
+  },
+  "homepage": "https://github.com/outbounder/get-workspace-version#readme",
+  "dependencies": {
+    "@npmcli/map-workspaces": "^2.0.3"
+  }
+}
